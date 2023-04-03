@@ -1,0 +1,52 @@
+#\u914D\u7F6Etomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+    threads:
+      max: 200
+      min-spare: 30
+    connection-timeout: 5000ms
+  port: 8080
+  servlet:
+    context-path: /emos-wx-api
+#    \u914D\u7F6Emysql
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/emos?serverTimezone=GMT%2B8&autoReconnect=true&useUnicode=true&useSSL=false&characterEncoding=utf-8
+      username: root
+      password: root
+      initial-size: 8
+      # \u6700\u5927\u8FDE\u63A5\u6C60\u6570\u91CF
+      max-active: 16
+      # \u5DF2\u4E0D\u518D\u4F7F\u7528
+      # max-idle: 8
+      # \u6700\u5C0F\u8FDE\u63A5\u6C60\u6570\u91CF
+      min-idle: 2
+      # \u83B7\u53D6\u8FDE\u63A5\u65F6\u6700\u5927\u7B49\u5F85\u65F6\u95F4\uFF0C\u5355\u4F4D\u6BEB\u79D2\u3002\u914D\u7F6E\u4E86maxWait\u4E4B\u540E\uFF0C\u7F3A\u7701\u542F\u7528\u516C\u5E73\u9501\uFF0C\u5E76\u53D1\u6548\u7387\u4F1A\u6709\u6240\u4E0B\u964D\uFF0C\u5982\u679C\u9700\u8981\u53EF\u4EE5\u901A\u8FC7\u914D\u7F6EuseUnfairLock\u5C5E\u6027\u4E3Atrue\u4F7F\u7528\u975E\u516C\u5E73\u9501
+      max-wait: 60000
+      test-on-borrow: false
+      test-while-idle: true
+      test-on-return: false
+
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  #\u914D\u7F6Eredis
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-active: 1000
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 8
+#  \u914D\u7F6Emongodb
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: emos
+      authentication-database: admin

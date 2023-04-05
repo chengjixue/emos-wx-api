@@ -11,6 +11,9 @@ server:
     context-path: /emos-wx-api
 #    \u914D\u7F6Emysql
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver

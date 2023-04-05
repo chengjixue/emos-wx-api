@@ -9,9 +9,6 @@
         <module name="emos-wx-api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="emos-wx-api" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

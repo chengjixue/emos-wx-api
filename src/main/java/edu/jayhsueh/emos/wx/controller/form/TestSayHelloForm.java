@@ -16,8 +16,8 @@ import javax.validation.constraints.Pattern;
 @ApiModel
 @Data
 public class TestSayHelloForm {
-    @NotBlank
-    @Pattern(regexp = "^[\\u4e00-\\u9fa5]{2,20}$")
+    // @NotBlank
+    // @Pattern(regexp = "^[\\u4e00-\\u9fa5]{2,20}$")
     @ApiModelProperty("姓名")
     private String name;
 
